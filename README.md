@@ -1,0 +1,2 @@
+# Trucking-Expense-System
+This is one of my old .NET 2.0 projects that I believe I wrote in VS 2005. I used VS Community 2017 to open it and convert the solution files. I actually made this for a friend who was a owner-operator truck driver and needed a system to keep track of his income and expenses for loads, making it much easier at tax season. This was a cool project that I wrote when I was learning about VB.NET databases. I would like to update the code when I get time.
