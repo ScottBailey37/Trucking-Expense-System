@@ -1,0 +1,458 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fprq1\fcharset0 Courier New;}{\f1\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue255;\red0\green128\blue0;\red128\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\f0\fs20\par
+\par
+\cf1 Friend\cf0  \cf1 Class\cf0  Truck\par
+    \cf1 Inherits\cf0  Income\par
+    \cf2 'Sub New(ByVal id As Integer)\par
+\cf0     \cf2 '    MyBase.New(id)\par
+\cf0     \cf2 'End Sub\par
+\cf0     \cf2 'Public _Driver As Driver\par
+\cf0     \cf2 'Public _Income As Income\par
+\cf0 #\cf1 Region\cf0  \cf3 "Properties"\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  TruckID() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Id\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _Id = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Year() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Year\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _Year = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Model() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Model\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Model = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Make() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Make\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Make = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Color() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Color\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Color = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  VIN() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _VIN\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _VIN = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Notes() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Notes\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Notes = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0 #\cf1 End\cf0  \cf1 Region\par
+\par
+\cf0     \cf1 Private\cf0  _Id \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _Year \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _Model \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Make \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Color \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _VIN \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Mileage \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _Notes \cf1 As\cf0  \cf1 String\par
+\par
+\par
+End\cf0  \cf1 Class\par
+\par
+Friend\cf0  \cf1 Class\cf0  Income\par
+    \cf2 'Inherits Deductions\par
+\par
+\cf0     \cf1 Sub\cf0  \cf1 New\cf0 ()\par
+\par
+    \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Sub\cf0  \cf1 New\cf0 (\cf1 ByVal\cf0  id \cf1 As\cf0  \cf1 Integer\cf0 )\par
+        \cf2 'MyBase.New(id)\par
+\cf0     \cf1 End\cf0  \cf1 Sub\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  PayDate() \cf1 As\cf0  \cf1 Date\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _PayDate\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Date\cf0 )\par
+            _PayDate = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  GrossPay() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _GrossPay\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _GrossPay = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  NetPay() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _NetPay\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _NetPay = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  TotalDeductions() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _TotalDeductions\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _TotalDeductions = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\par
+\cf0     \cf1 Private\cf0  _PayDate \cf1 As\cf0  \cf1 Date\par
+\cf0     \cf1 Private\cf0  _GrossPay \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _NetPay \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _TotalDeductions \cf1 As\cf0  \cf1 Double\par
+End\cf0  \cf1 Class\par
+\par
+Friend\cf0  \cf1 Class\cf0  Driver\par
+    \cf1 Inherits\cf0  Income\par
+\par
+    \cf2 'Sub New(ByVal id As Integer)\par
+\cf0     \cf2 '    'MyBase.New(id)\par
+\cf0     \cf2 'End Sub\par
+\cf0 #\cf1 Region\cf0  \cf3 "Properties"\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  DateTerminated() \cf1 As\cf0  \cf1 Date\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _DateTerminated\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Date\cf0 )\par
+            _DateTerminated = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  DateStarted() \cf1 As\cf0  \cf1 Date\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _DateStarted\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Date\cf0 )\par
+            _DateStarted = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  DriverID() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _DriverId\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _DriverId = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  FirstName() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _FirstName\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _FirstName = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  LastName() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _LastName\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _LastName = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  MiddleName() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _MiddleName\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _MiddleName = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Age() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Age\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Age = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  DOB() \cf1 As\cf0  \cf1 Date\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _DOB\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Date\cf0 )\par
+            _DOB = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Gender() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Gender\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Gender = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Race() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Race\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Race = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  SSN() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _SSN\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _SSN = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  LicenseNumber() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _LicenseNumber\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _LicenseNumber = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Address() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Address\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _Address = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  City() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _City\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _City = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  State() \cf1 As\cf0  \cf1 String\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _State\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 String\cf0 )\par
+            _State = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Zip() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Zip\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _Zip = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Phone1() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Phone1\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _Phone1 = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Phone2() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Phone2\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _Phone2 = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  NumberDependants() \cf1 As\cf0  \cf1 Integer\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _NumberDependants\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Integer\cf0 )\par
+            _NumberDependants = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0 #\cf1 End\cf0  \cf1 Region\par
+\par
+\cf0     \cf1 Private\cf0  _DriverId \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _DateStarted \cf1 As\cf0  \cf1 Date\par
+\cf0     \cf1 Private\cf0  _DateTerminated \cf1 As\cf0  \cf1 Date\par
+\cf0     \cf1 Private\cf0  _FirstName \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _LastName \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _MiddleName \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Age \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _DOB \cf1 As\cf0  \cf1 Date\par
+\cf0     \cf1 Private\cf0  _Gender \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Race \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _SSN \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _LicenseNumber \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Address \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _City \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _State \cf1 As\cf0  \cf1 String\par
+\cf0     \cf1 Private\cf0  _Zip \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _Phone1 \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _Phone2 \cf1 As\cf0  \cf1 Integer\par
+\cf0     \cf1 Private\cf0  _NumberDependants \cf1 As\cf0  \cf1 Integer\par
+End\cf0  \cf1 Class\par
+\par
+Friend\cf0  \cf1 Class\cf0  Deductions\par
+\par
+#\cf1 Region\cf0  \cf3 "Properties"\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  CashAdvances() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _CashAdvances\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _CashAdvances = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Food() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Food\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Food = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Fuel() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Fuel\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Fuel = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Tires() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Tires\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Tires = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Parts() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Parts\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Parts = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Service() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Service\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Service = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Miscellaneous() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Miscellaneous\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Miscellaneous = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  RoadTax() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _RoadTax\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _RoadTax = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  FuelTax() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _FuelTax\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _FuelTax = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Licensing() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Licensing\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Licensing = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Insurance() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Insurance\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Insurance = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  WorkmansComp() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _WorkmansComp\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _WorkmansComp = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  TruckPayment() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _TruckPayment\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _TruckPayment = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  PhonePayment() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _PhonePayment\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _PhonePayment = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0     \cf1 Friend\cf0  \cf1 Property\cf0  Other() \cf1 As\cf0  \cf1 Double\par
+\cf0         \cf1 Get\par
+\cf0             \cf1 Return\cf0  _Other\par
+        \cf1 End\cf0  \cf1 Get\par
+\cf0         \cf1 Set\cf0 (\cf1 ByVal\cf0  value \cf1 As\cf0  \cf1 Double\cf0 )\par
+            _Other = value\par
+        \cf1 End\cf0  \cf1 Set\par
+\cf0     \cf1 End\cf0  \cf1 Property\par
+\cf0 #\cf1 End\cf0  \cf1 Region\par
+\par
+\par
+\par
+\cf0     \cf1 Private\cf0  _CashAdvances \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Food \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Fuel \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Tires \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Parts \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Service \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Miscellaneous \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _RoadTax \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _FuelTax \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Licensing \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Insurance \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _WorkmansComp \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _TruckPayment \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _PhonePayment \cf1 As\cf0  \cf1 Double\par
+\cf0     \cf1 Private\cf0  _Other \cf1 As\cf0  \cf1 Double\par
+End\cf0  \cf1 Class\par
+\cf0\f1\par
+}
+ 
